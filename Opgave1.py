@@ -21,8 +21,8 @@ names = [
 ]
 for i in names:
     print(i)
-    all_freq = dict(reduce(lambda x, y: {**x, y: x.get(y, 0) + 1}, i, {}))
-    print(all_freq)
+    countChar = dict(reduce(lambda x, y: {**x, y: x.get(y, 0) + 1}, i, {})) # den tæller stort of lille bokstav som 2 forskellige, måske lav om til lowercase inden
+    print(countChar)
 
 
 a = sorted(names, key=len)
